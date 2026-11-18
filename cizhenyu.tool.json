@@ -1,0 +1,50 @@
+{
+  "protocolVersion": 1,
+  "id": "firecrawl",
+  "name": "Firecrawl",
+  "category": "crawl",
+  "tier": "recommended",
+  "description": "网页抓取 / crawl / map / search",
+  "source": {
+    "github": "https://github.com/youcizi-art/cizhenyu_firecrawl",
+    "defaultRef": "master"
+  },
+  "install": {
+    "runtime": "python",
+    "steps": [],
+    "readyCheck": ["server.py"]
+  },
+  "credentials": {
+    "key": "firecrawl",
+    "fields": [
+      {
+        "type": "password",
+        "name": "apiKey",
+        "label": "API Key",
+        "required": true,
+        "tip": "在 Firecrawl 控制台创建或复制 API Key",
+        "link": {
+          "label": "Firecrawl API Keys",
+          "url": "https://www.firecrawl.dev/app"
+        }
+      }
+    ],
+    "sidecar": "firecrawl.json"
+  },
+  "env": [
+    { "name": "FIRECRAWL_API_KEY", "fromCredential": "apiKey" },
+    { "name": "CIZHENYU_AUTH_DIR", "from": "credentialsDir" }
+  ],
+  "mcp": {
+    "transport": "stdio",
+    "command": "python",
+    "args": ["server.py"],
+    "cwd": "."
+  },
+  "guides": { "setup": "guides/setup.md" },
+  "health": {
+    "requireCredentials": true,
+    "requireReadyFiles": ["server.py"]
+  },
+  "actions": []
+}
