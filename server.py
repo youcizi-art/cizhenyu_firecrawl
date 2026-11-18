@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Firecrawl Cloud MCP（零依赖 stdio JSON-RPC）。
 
-API Key 由词真语 Deploy 注入：
+API Key 由磁帧鱼 Deploy 注入：
   - 进程环境 FIRECRAWL_API_KEY（优先）
   - 或 CIZHENYU_AUTH_DIR/firecrawl.json 的 apiKey
 禁止在代码或仓库中写入密钥。

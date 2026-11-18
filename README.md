@@ -1,6 +1,6 @@
 # cizhenyu_firecrawl
 
-Firecrawl Cloud MCP for 词真语 Deploy。
+Firecrawl Cloud MCP for 磁帧鱼 Deploy。
 
 ## Secrets
 
